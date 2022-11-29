@@ -13,23 +13,30 @@ const createSelector = (element, selectorType, name) => {
         console.log('Choose "class" or "id" as a selector type.')
     }
 }
-// Select class element function
-// Select id element function
-// Return element function
-    // If element is a class...
-        // Return select class element function
-    // If element is a id...
-        // Return select id element function
+const selectClass = name => {
+    return document.getElementsByClassName(name)
+}
+const selectID = name => {
+    return document.getElementById(name)
+}
+const selectElement = (selectorType, name) => {
+    if (selectorType == 'class') {
+        return selectClass(name)
+    } if (selectorType == 'id') {
+        return selectID(name)
+    }
+}
 const createDiv = (element, selectorType, name, textContent, appendParent) => {
     const newDiv = document.createElement(element)
     createSelector(newDiv, selectorType, name)
     const newContent = document.createTextNode(textContent)
     newDiv.appendChild(newContent)
     appendParent.appendChild(newDiv)
-    // Return element selected function
+    return selectElement(selectorType, name)
 }
 // Button creation function
-const createButton = () => {
+const createButton = (element, selectorType, name, textContent, appendParent) => {
+    const newButton = document.createElement(element)
     
 }
 const createElementType = (element, selectorType, name, textContent, appendParent) => {
