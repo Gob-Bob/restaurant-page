@@ -34,16 +34,19 @@ const createDiv = (element, selectorType, name, textContent, appendParent) => {
     appendParent.appendChild(newDiv)
     return selectElement(selectorType, name)
 }
-// Button creation function
 const createButton = (element, selectorType, name, textContent, appendParent) => {
     const newButton = document.createElement(element)
-    
+    createSelector(newButton, selectorType, name)
+    const newContent = document.createTextNode(textContent)
+    newButton.appendChild(newContent)
+    appendParent.appendChild(newButton)
+    return selectElement(selectorType, name)
 }
 const createElementType = (element, selectorType, name, textContent, appendParent) => {
     if (element == 'div') {
         return createDiv(element, selectorType, name, textContent, appendParent)
     } if (element == 'button') {
-        // Button creation function
+        return createButton(element, selectorType, name, textContent, appendParent)
     } else {
         console.log('Unrecognized element type.')
     }
