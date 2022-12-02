@@ -1,26 +1,29 @@
 import * as ele from "./element"
+import './style.css'
 
 (function () {
     
-    const homeTab = ele.createElement('button', 'class', 'tab', 'Home')
-    const menuTab = ele.createElement('button', 'class', 'tab', 'Menu')
-    const contactTab = ele.createElement('button', 'class', 'tab', 'Contact')
+    const eleVar = {
+        homeTab: ele.createElement('button', 'class', 'tab', 'Home'),
+        menuTab: ele.createElement('button', 'class', 'tab', 'Menu'),
+        contactTab: ele.createElement('button', 'class', 'tab', 'Contact'),
+        
+        homeTabContent: ele.createElement('div', 'class', 'tab', 'Home Tab Content'),
+        menuTabContent: ele.createElement('div', 'class', 'tab', 'Menu Tab Content'),
+        contactTabContent: ele.createElement('div', 'class', 'tab', 'Contact Tab Content'),
+    }
     
-    const homeTabContent = ele.createElement('div', 'class', 'tab', 'Home Tab Content')
-    const menuTabContent = ele.createElement('div', 'class', 'tab', 'Menu Tab Content')
-    const contactTabContent = ele.createElement('div', 'class', 'tab', 'Contact Tab Content')
-
-    const tabVar = {
+    const miscVar = {
         tabClassArray: ['home', 'menu', 'contact'],
-        tabNode: document.querySelectorAll('.tab')
+        tabNode: document.querySelectorAll('.tab'),
     }
 
-    tabVar.tabNode.forEach((element, index) => {
+    miscVar.tabNode.forEach((element, index) => {
         if (index >= 3 && index <= 5) {
-            element.classList.add(tabVar.tabClassArray[index-3])
+            element.classList.add(miscVar.tabClassArray[index-3])
             element.classList.add('content')
         } else {
-            element.classList.add(tabVar.tabClassArray[index])
+            element.classList.add(miscVar.tabClassArray[index])
         }
     })
 
