@@ -62,3 +62,8 @@ export const createElement = (element, selectorType, name, textContent) => {
     const mainContent = document.getElementById('content')
     return createElementType(element, selectorType, name, textContent, mainContent)
 }
+export const appendGroup = (node, parent) => {
+    node.forEach(element => {
+        parent.appendChild(element)
+    })
+}
