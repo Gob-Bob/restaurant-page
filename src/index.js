@@ -2,34 +2,22 @@ import * as ele from "./element"
 import './style.css'
 
 (function () {
-    
-    const eleVar = {
-        tabContainer: ele.createElement('div', 'class', 'tabContainer', ''),
-        homeTab: ele.createElement('button', 'class', 'tab', 'Home'),
-        menuTab: ele.createElement('button', 'class', 'tab', 'Menu'),
-        contactTab: ele.createElement('button', 'class', 'tab', 'Contact'),
-        
-        tabContentContainer: ele.createElement('div', 'class', 'tabContentContainer', ''),
-        homeTabContent: ele.createElement('div', 'class', 'content', 'Home Tab Content'),
-        menuTabContent: ele.createElement('div', 'class', 'content', 'Menu Tab Content'),
-        contactTabContent: ele.createElement('div', 'class', 'content', 'Contact Tab Content'),
-    }
-    
-    const miscVar = {
-        tabClassArray: ['home', 'menu', 'contact'],
-        tabNode: document.querySelectorAll('.tab'),
-        contentNode: document.querySelectorAll('.content'),
-    }
+    const mainContent = document.getElementById('content')
 
-    miscVar.tabNode.forEach((element, index) => {
-        element.classList.add(miscVar.tabClassArray[index])
-    })
+    const tabContainer = ele.create('div', 'class', 'tabContainer', '', mainContent)
+    const tabHome = ele.create('button', 'class', 'tab', 'Home', tabContainer)
+    tabHome.classList.add('home')
+    const tabMenu = ele.create('button', 'class', 'tab', 'Menu', tabContainer)
+    tabMenu.classList.add('menu')
+    const tabContact = ele.create('button', 'class', 'tab', 'Contact', tabContainer)
+    tabContact.classList.add('contact')
 
-    miscVar.contentNode.forEach((element, index) => {
-        element.classList.add(miscVar.tabClassArray[index])
-    })
+    const tabContentContainer = ele.create('div', 'class', 'tabContentContainer', '', mainContent)
+    const tabContentHome = ele.create('div', 'class', 'tab', 'Home Content', tabContentContainer)
+    tabContentHome.classList.add('content', 'home')
+    const tabContentMenu = ele.create('div', 'class', 'tab', 'Menu Content', tabContentContainer)
+    tabContentMenu.classList.add('content', 'menu')
+    const tabContentContact = ele.create('div', 'class', 'tab', 'Contact Content', tabContentContainer)
+    tabContentContact.classList.add('content', 'contact')
 
-    const sayHello = () => {
-        console.log('Hello world!')
-    }
 })()
