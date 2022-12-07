@@ -30,13 +30,19 @@ import './style.css'
             button.addEventListener('click', () => {
                 const tabNumber = button.dataset.forTab
                 const tabToActivate = mainContent.querySelector(`.content[data-tab='${tabNumber}']`)
-                console.log(tabNumber)
-                console.log(tabToActivate)
+                tabContainer.querySelectorAll('.tab').forEach(button => {
+                    button.classList.remove('tab-active')
+                })
+                mainContent.querySelectorAll('.content').forEach(content => {
+                    content.classList.remove('content-active')
+                })
+                button.classList.add('tab-active')
+                tabToActivate.classList.add('content-active')
             })
         })
     }
-
     document.addEventListener('DOMContentLoaded', () => {
         setupTabs()
+        tabContainer.querySelector('.tab').click()
     })
 })()
