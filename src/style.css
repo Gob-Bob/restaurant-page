@@ -1,0 +1,9 @@
+.tab-active {
+    background: lightblue;
+}
+.content {
+    display: none;
+}
+.content-active {
+    display: block;
+}
