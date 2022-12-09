@@ -7,21 +7,29 @@ const homeTab = (() => {
     const tabButton = elementCreation.create('button', 'class', 'tab', 'Home', tabContainer)
     tabButton.setAttribute('data-for-tab', '1')
 
-    const tabContent = elementCreation.create('div', 'class', 'content', '', mainContent)
-    tabContent.classList.add('container')
-    tabContent.setAttribute('data-tab', '1')
+    const tabContentContainer = elementCreation.create('div', 'class', 'content', '', mainContent)
+    tabContentContainer.classList.add('container')
+    tabContentContainer.setAttribute('data-tab', '1')
 
-    const tabTitle = elementCreation.create('div', 'class', 'title', 'iCafe', tabContent)
+    const tabTitle = elementCreation.create('div', 'class', 'title', 'iCafe', tabContentContainer)
     tabTitle.classList.add('home')
 
-    const customerReview = elementCreation.create('div', 'class', 'content', "I had a truly delightful dining experience at this restaurant, thanks to the fantastic food and top-notch service. The atmosphere was cozy and inviting, and I felt right at home. I would highly recommend this restaurant to anyone, and I'll definitely be coming back! Thank you for a memorable evening. - Jane Doe", tabContent)
+    const customerReview = (() => {
+        const container = elementCreation.create('div', 'class', 'review-container', '', tabContentContainer)
+        const review = elementCreation.create('div', 'class', 'review', "I had a truly delightful dining experience at this restaurant, thanks to the fantastic food and top-notch service. The atmosphere was cozy and inviting, and I felt right at home. I would highly recommend this restaurant to anyone, and I'll definitely be coming back! Thank you for a memorable evening.", container)
+        const customer = elementCreation.create('div', 'class', 'customer', ' - Jane Doe', container)
+    })()
+
+    const restaurantHours = (() => {
+        const title = elementCreation.create('div', 'class', 'hours-title', 'Hours', tabContentContainer)
+    })
 
     const variablesNeedingClass = [
         tabButton,
         tabContent,
-        tabTitle,
-        customerReview
+        tabTitle
     ]
+
     variablesNeedingClass.forEach(variable => {
             variable.classList.add('home')
     })
