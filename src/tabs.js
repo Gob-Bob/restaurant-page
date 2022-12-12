@@ -1,9 +1,10 @@
 import * as elementCreation from './element'
 
 const mainContent = document.getElementById('content')
-const tabContainer = elementCreation.create('div', 'class', 'tabContainer', '', mainContent)
 
-const homeTab = (() => {
+export const tabContainer = elementCreation.create('div', 'class', 'tabContainer', '', mainContent)
+
+export const homeTab = (() => {
     const tabButton = elementCreation.create('button', 'class', 'tab', 'Home', tabContainer)
     tabButton.setAttribute('data-for-tab', '1')
 
@@ -41,5 +42,3 @@ const homeTab = (() => {
             variable.classList.add('home')
     })
 })
-
-export {mainContent, tabContainer, homeTab}

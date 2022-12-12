@@ -1,9 +1,39 @@
+html,
+body {
+    margin: 0px;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* All Tabs */
 .tab-active {
-    background: lightblue;
+    background: lightgray !important;
 }
 .content {
     display: none;
 }
 .content-active {
     display: block;
+    background: lightgray;
 }
+#content {
+    display: flex;
+    height: 100%;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.tabContainer > .tab {
+    height: 60px;
+    width: 120px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background: gray;
+}
+.content {
+    flex-grow: 1;
+}
+
+/* Home Tab */
