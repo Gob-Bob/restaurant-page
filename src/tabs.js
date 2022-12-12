@@ -12,8 +12,7 @@ export const homeTab = (() => {
     tabContentContainer.classList.add('home-content-container')
     tabContentContainer.setAttribute('data-tab', '1')
 
-    const tabTitle = elementCreation.create('div', 'class', 'title', 'Welcome to the Scrap Yard!', tabContentContainer)
-    tabTitle.classList.add('home')
+    const tabTitle = elementCreation.create('div', 'class', 'home-title', 'Welcome to the Scrap Yard!', tabContentContainer)
 
     const customerReview = (() => {
         const container = elementCreation.create('div', 'class', 'review-container', '', tabContentContainer)

@@ -6,8 +6,9 @@ html,
 body {
     margin: 0px;
     height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background: url('./background.jpg') no-repeat center/cover;
+    line-height: 1.5;
 }
 
 /* All Tabs */
@@ -37,7 +38,8 @@ body {
     border: none;
     background-color: var(--tab-footer-background-color);
     color: white;
-    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
 }
 .content {
     flex-grow: 1;
@@ -52,7 +54,6 @@ body {
     align-items: center;
     background-color: var(--tab-footer-background-color);
     color: white;
-    font-weight: 700;
 }
 
 /* Home Tab */
@@ -62,4 +63,12 @@ body {
     justify-content: space-around;
     align-items: center;
     width: 50%;
+    padding: 100px;
+}
+.home-title {
+    font-size: 30px;
+    font-weight: 550;
+}
+.review-container {
+    text-align: center;
 }
