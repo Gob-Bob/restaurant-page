@@ -1,21 +1,25 @@
+:root {
+    --active-tab-background-color: rgba(200, 200, 200, 0.95);
+    --tab-footer-background-color: rgba(50, 50, 50, 0.8);
+}
 html,
 body {
     margin: 0px;
     height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: url('./background.jpg') no-repeat center/cover;
 }
 
 /* All Tabs */
 .tab-active {
-    background: lightgray !important;
+    background: var(--active-tab-background-color) !important;
 }
 .content {
     display: none;
 }
 .content-active {
     display: block;
-    background: lightgray;
+    background: var(--active-tab-background-color);
 }
 #content {
     display: flex;
@@ -31,7 +35,9 @@ body {
     font-size: 15px;
     outline: none;
     border: none;
-    background: white;
+    background-color: var(--tab-footer-background-color);
+    color: white;
+    font-weight: 700;
 }
 .content {
     flex-grow: 1;
@@ -44,6 +50,9 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: var(--tab-footer-background-color);
+    color: white;
+    font-weight: 700;
 }
 
 /* Home Tab */
