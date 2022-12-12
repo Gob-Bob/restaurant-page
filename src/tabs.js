@@ -9,10 +9,10 @@ export const homeTab = (() => {
     tabButton.setAttribute('data-for-tab', '1')
 
     const tabContentContainer = elementCreation.create('div', 'class', 'content', '', mainContent)
-    tabContentContainer.classList.add('container')
+    tabContentContainer.classList.add('home-content-container')
     tabContentContainer.setAttribute('data-tab', '1')
 
-    const tabTitle = elementCreation.create('div', 'class', 'title', 'iCafe', tabContentContainer)
+    const tabTitle = elementCreation.create('div', 'class', 'title', 'Welcome to [Restaurant]!', tabContentContainer)
     tabTitle.classList.add('home')
 
     const customerReview = (() => {
@@ -31,14 +31,4 @@ export const homeTab = (() => {
             elementCreation.create('div', 'class', 'days-time-open', day + hoursOfOpening, hoursContainer)
         })
     })()
-
-    const variablesNeedingClass = [
-        tabButton,
-        tabContentContainer,
-        tabTitle
-    ]
-
-    variablesNeedingClass.forEach(variable => {
-            variable.classList.add('home')
-    })
 })

@@ -45,7 +45,6 @@ import './style.css'
         const help = elementCreation.create('div', 'class', 'footer-help', 'Need help? Visit our support page for assistance', container)        
     })()
 
-
     document.addEventListener('DOMContentLoaded', () => {
         setupTabs()
         tabs.tabContainer.querySelector('.tab').click()
