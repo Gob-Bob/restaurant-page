@@ -62,13 +62,25 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 50%;
-    padding: 100px;
+    width: 35%;
+    padding: 50px 200px 50px 200px;
 }
 .home-title {
     font-size: 30px;
     font-weight: 550;
 }
 .review-container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.customer {
+    align-self: flex-end;
+}
+.hours-title {
+    font-size: 20px;
+    font-weight: 550;
+}
+.location-title {
+    font-size: 20px;
+    font-weight: 550;
 }
