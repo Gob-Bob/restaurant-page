@@ -3,31 +3,36 @@ import * as elementCreation from './element'
 const mainContent = document.getElementById('content')
 export const tabContainer = elementCreation.create('div', 'class', 'tabContainer', '', mainContent)
 
+const createContainer = (containerClassName, firstElementClassName, firstElementDisplayText, SecondElementClassName, SecondElementDisplayText, appendParent) => {
+    const container = elementCreation.create('div', 'class', containerClassName, '', appendParent)
+    const firstElement = elementCreation.create('div', 'class', firstElementClassName, firstElementDisplayText, container)
+    const secondElement = elementCreation.create('div', 'class', SecondElementClassName, SecondElementDisplayText, container)
+    return container, firstElement, secondElement
+}
+
 export const homeTab = (() => {
     const tabButton = elementCreation.create('button', 'class', 'tab', 'Home', tabContainer)
     tabButton.classList.add('tab-active')
     const tabContentContainer = elementCreation.create('div', 'class', 'content', '', mainContent)
-    tabContentContainer.classList.add('home-main-container')
+    tabContentContainer.classList.add('container')
     tabContentContainer.classList.add('content-active')
 
     const tabTitle = elementCreation.create('div', 'class', 'home-title', 'Welcome to the Scrap Yard!', tabContentContainer)
 
-    const customerReview = (() => {
-        const container = elementCreation.create('div', 'class', 'review-container', '', tabContentContainer)
-        elementCreation.create('div', 'class', 'review', "I had a truly delightful dining experience at this restaurant, thanks to the fantastic food and top-notch service. The atmosphere was cozy and inviting, and I felt right at home. I would highly recommend this restaurant to anyone, and I'll definitely be coming back! Thank you for a memorable evening.", container)
-        elementCreation.create('div', 'class', 'customer', ' - Local Scrapper', container)
-    })()
+    const customerReview = createContainer('review-container', 'customer-comment', "I had a truly delightful dining experience at this restaurant, thanks to the fantastic food and top-notch service. The atmosphere was cozy and inviting, and I felt right at home. I would highly recommend this restaurant to anyone, and I'll definitely be coming back! Thank you for a memorable evening.", 'customer-name', ' - Local Scrapper', tabContentContainer)
 
-    const restaurantHours = (() => {
-        const mainContainer = elementCreation.create('div', 'class', 'hours-container', '', tabContentContainer)
-        elementCreation.create('div', 'class', 'hours-title', 'Hours', mainContainer)
-        const hoursContainer = elementCreation.create('div', 'class', 'hours-container', '', mainContainer)
-        const daysArray = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-        const hoursOfOpening = ': 9am - 10pm'
-        daysArray.forEach(day => {
-            elementCreation.create('div', 'class', 'days-time-open', day + hoursOfOpening, hoursContainer)
-        })
-    })()
+    // const restaurantHours = (() => {
+    //     const mainContainer = elementCreation.create('div', 'class', 'hours-container', '', tabContentContainer)
+    //     elementCreation.create('div', 'class', 'hours-title', 'Hours', mainContainer)
+    //     const hoursContainer = elementCreation.create('div', 'class', 'hours-container', '', mainContainer)
+    //     const daysArray = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    //     const hoursOfOpening = ': 9am - 10pm'
+    //     daysArray.forEach(day => {
+    //         elementCreation.create('div', 'class', 'days-time-open', day + hoursOfOpening, hoursContainer)
+    //     })
+    // })()
+
+    
 
     const restaurantLocation = (() => {
         const mainContainer = elementCreation.create('div', 'class', 'location-container', '', tabContentContainer)
@@ -38,7 +43,10 @@ export const homeTab = (() => {
 
 export const menuTab = (() => {
     const tabButton = elementCreation.create('button', 'class', 'tab', 'Menu', tabContainer)
-    const tabContentContainer = elementCreation.create('div', 'class', 'content', 'Menu: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis erat sed elit scelerisque cursus. Fusce dignissim volutpat justo, in pretium lectus viverra a. Suspendisse potenti. Morbi vitae enim accumsan, euismod tellus at, facilisis tortor. Duis rutrum turpis sed velit volutpat, sed pellentesque quam euismod. Proin quis erat quis erat auctor fermentum at quis orci. Nam dignissim leo at urna bibendum, quis tincidunt arcu lobortis. In hac habitasse platea dictumst. Sed in nunc quis nunc imperdiet aliquet.', mainContent)
+    const tabContentContainer = elementCreation.create('div', 'class', 'content', '', mainContent)
+    tabContentContainer.classList.add('container')
+
+    const beverageMenu = createContainer('beverage-container', 'beverage-title', 'Beverages', 'beverage-content', '', tabContentContainer)
 })
 
 export const contactTab = (() => {

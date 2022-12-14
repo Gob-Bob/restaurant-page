@@ -58,8 +58,7 @@ body {
 }
 
 /* Home Tab */
-.home-main-container {
-
+.container {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -74,7 +73,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-.customer {
+.customer-name {
     align-self: flex-end;
 }
 .hours-title {
