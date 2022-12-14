@@ -19,7 +19,7 @@ body {
     display: none;
 }
 .content-active {
-    display: block;
+    display: flex;
     background: var(--active-tab-background-color);
 }
 #content {
@@ -40,6 +40,7 @@ body {
     color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
+    cursor: pointer;
 }
 .content {
     flex-grow: 1;
@@ -57,8 +58,8 @@ body {
 }
 
 /* Home Tab */
-.home-content-container {
-    display: flex;
+.home-main-container {
+
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
