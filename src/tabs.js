@@ -36,33 +36,35 @@ export const homeTab = (() => {
     const restaurantLocation = createContainer('location-container', 'location-title', 'Location', 'location-address', '123 Acme Drive, Corporation, CA', tabContentContainer)
 })
 
-export const menuTab = (() => {
+export const menuTab = () => {
     const tabButton = elementCreation.create('button', 'class', 'tab', 'Menu', tabContainer)
     const tabContentContainer = elementCreation.create('div', 'class', 'content', '', mainContent)
     tabContentContainer.classList.add('container')
     tabContentContainer.classList.add('menu')
 
-    const beverageMenu = createContainer('beverage-container', 'beverage-title', 'Beverages', 'beverage-content', '', tabContentContainer)
-
-    const mobil = (() => {
-        createContainer('mobil-Container', 'mobil-title', 'Mobil 1 Extended Performance Full Synthetic Motor Oil 5W-30', 'mobil-content', '', beverageMenu.secondElement)
-        const image = elementCreation.create('img', 'class', 'mobil-image', '', beverageMenu.secondElement)
-        image.src = mobilImageFile
+    const beverageMenu = (() => {
+        const beverageContainer = createContainer('beverage-container', 'beverage-title', 'Beverages', 'beverage-content', '', tabContentContainer)
+    
+        const mobil = (() => {
+            createContainer('mobil-Container', 'mobil-title', 'Mobil 1 Extended Performance Full Synthetic Motor Oil 5W-30', 'mobil-content', '', beverageContainer.secondElement)
+            const image = elementCreation.create('img', 'class', 'mobil-image', '', beverageContainer.secondElement)
+            image.src = mobilImageFile
+        })()
+    
+        const superTech = (() => {
+            createContainer('mobil-Container', 'supertech-title', 'Super Tech Full Synthetic SAE 5W-30 Motor Oil', 'supertech-content', '', beverageContainer.secondElement)
+            const image = elementCreation.create('img', 'class', 'supertech-image', '', beverageContainer.secondElement)
+            image.src = superTechImageFile
+        })()
     })()
+}
 
-    const superTech = (() => {
-        createContainer('mobil-Container', 'supertech-title', 'Super Tech Full Synthetic SAE 5W-30 Motor Oil', 'supertech-content', '', beverageMenu.secondElement)
-        const image = elementCreation.create('img', 'class', 'supertech-image', '', beverageMenu.secondElement)
-        image.src = superTechImageFile
-    })()
-})
-
-export const contactTab = (() => {
+export const contactTab = () => {
     const tabButton = elementCreation.create('button', 'class', 'tab', 'Contact', tabContainer)
     const tabContentContainer = elementCreation.create('div', 'class', 'content', 'Contact: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis erat sed elit scelerisque cursus. Fusce dignissim volutpat justo, in pretium lectus viverra a. Suspendisse potenti. Morbi vitae enim accumsan, euismod tellus at, facilisis tortor. Duis rutrum turpis sed velit volutpat, sed pellentesque quam euismod. Proin quis erat quis erat auctor fermentum at quis orci. Nam dignissim leo at urna bibendum, quis tincidunt arcu lobortis. In hac habitasse platea dictumst. Sed in nunc quis nunc imperdiet aliquet.', mainContent)
     tabContentContainer.classList.add('container')
     tabContentContainer.classList.add('contact')
-})
+}
 
 export const setupTabs = () => {
     const allTabs = document.querySelectorAll('.tab'),
@@ -81,20 +83,3 @@ export const setupTabs = () => {
         })
     })
 }
-
-// export const setupTabs = () => {
-//     document.querySelectorAll('.tab').forEach(button => {
-//         button.addEventListener('click', () => {
-//             const tabNumber = button.dataset.forTab
-//             const tabToActivate = mainContent.querySelector(`.content[data-tab='${tabNumber}']`)
-//             tabs.tabContainer.querySelectorAll('.tab').forEach(button => {
-//                 button.classList.remove('tab-active')
-//             })
-//             mainContent.querySelectorAll('.content').forEach(content => {
-//                 content.classList.remove('content-active')
-//             })
-//             button.classList.add('tab-active')
-//             tabToActivate.classList.add('content-active')
-//         })
-//     })
-// }
