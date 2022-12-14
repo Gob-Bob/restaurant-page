@@ -31,11 +31,13 @@ export const homeTab = (() => {
         })
     })()
 
-    const restaurantLocation = (() => {
-        const mainContainer = elementCreation.create('div', 'class', 'location-container', '', tabContentContainer)
-        elementCreation.create('div', 'class', 'location-title', 'Location', mainContainer)
-        elementCreation.create('div', 'class', 'address', '123 Acme Drive, Corporation, CA', mainContainer)
-    })()
+    // const restaurantLocation = (() => {
+    //     const mainContainer = elementCreation.create('div', 'class', 'location-container', '', tabContentContainer)
+    //     elementCreation.create('div', 'class', 'location-title', 'Location', mainContainer)
+    //     elementCreation.create('div', 'class', 'address', '123 Acme Drive, Corporation, CA', mainContainer)
+    // })()
+
+    const restaurantLocation = createContainer('location-container', 'location-title', 'Location', 'location-address', '123 Acme Drive, Corporation, CA', tabContentContainer)
 })
 
 export const menuTab = (() => {
