@@ -86,11 +86,12 @@ body {
 }
 
 /* Menu Tab */
-.mobil-image {
-    height: 350px;
-    width: auto;
-}
+.mobil-image,
 .supertech-image {
     height: 350px;
     width: auto;
+}
+.mobil-container,
+.supertech-container {
+    border: 1px solid black;
 }
