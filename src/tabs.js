@@ -46,15 +46,17 @@ export const menuTab = () => {
         const beverageContainer = createContainer('beverage-container', 'beverage-title', 'Beverages', 'beverage-content', '', tabContentContainer)
     
         const mobil = (() => {
-            createContainer('mobil-Container', 'mobil-title', 'Mobil 1 Extended Performance Full Synthetic Motor Oil 5W-30', 'mobil-content', '', beverageContainer.secondElement)
-            const image = elementCreation.create('img', 'class', 'mobil-image', '', beverageContainer.secondElement)
+            const container = createContainer('mobil-container', 'mobil-title', 'Mobil 1 Extended Performance Full Synthetic Motor Oil 5W-30', 'mobil-content', '', beverageContainer.secondElement)
+            const image = elementCreation.create('img', 'class', 'mobil-image', '', container.secondElement)
             image.src = mobilImageFile
+            elementCreation.create('div', 'class', 'mobil-price', '$39.99', container.secondElement)
         })()
-    
+        
         const superTech = (() => {
-            createContainer('mobil-Container', 'supertech-title', 'Super Tech Full Synthetic SAE 5W-30 Motor Oil', 'supertech-content', '', beverageContainer.secondElement)
-            const image = elementCreation.create('img', 'class', 'supertech-image', '', beverageContainer.secondElement)
+            const container = createContainer('supertech-ontainer', 'supertech-title', 'Super Tech Full Synthetic SAE 5W-30 Motor Oil', 'supertech-content', '', beverageContainer.secondElement)
+            const image = elementCreation.create('img', 'class', 'supertech-image', '', container.secondElement)
             image.src = superTechImageFile
+            elementCreation.create('div', 'class', 'supertech-price', '$26.85', container.secondElement)
         })()
     })()
 }
