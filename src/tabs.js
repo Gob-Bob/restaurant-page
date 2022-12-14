@@ -1,4 +1,6 @@
 import * as elementCreation from './element'
+import mobilImageFile from './mobil.jpg'
+import superTechImageFile from './supertech.jpg'
 
 const mainContent = document.getElementById('content')
 export const tabContainer = elementCreation.create('div', 'class', 'tabContainer', '', mainContent)
@@ -31,12 +33,6 @@ export const homeTab = (() => {
         })
     })()
 
-    // const restaurantLocation = (() => {
-    //     const mainContainer = elementCreation.create('div', 'class', 'location-container', '', tabContentContainer)
-    //     elementCreation.create('div', 'class', 'location-title', 'Location', mainContainer)
-    //     elementCreation.create('div', 'class', 'address', '123 Acme Drive, Corporation, CA', mainContainer)
-    // })()
-
     const restaurantLocation = createContainer('location-container', 'location-title', 'Location', 'location-address', '123 Acme Drive, Corporation, CA', tabContentContainer)
 })
 
@@ -47,6 +43,18 @@ export const menuTab = (() => {
     tabContentContainer.classList.add('menu')
 
     const beverageMenu = createContainer('beverage-container', 'beverage-title', 'Beverages', 'beverage-content', '', tabContentContainer)
+
+    const mobil = (() => {
+        createContainer('mobil-Container', 'mobil-title', 'Mobil 1 Extended Performance Full Synthetic Motor Oil 5W-30', 'mobil-content', '', beverageMenu.secondElement)
+        const image = elementCreation.create('img', 'class', 'mobil-image', '', beverageMenu.secondElement)
+        image.src = mobilImageFile
+    })()
+
+    const superTech = (() => {
+        createContainer('mobil-Container', 'supertech-title', 'Super Tech Full Synthetic SAE 5W-30 Motor Oil', 'supertech-content', '', beverageMenu.secondElement)
+        const image = elementCreation.create('img', 'class', 'supertech-image', '', beverageMenu.secondElement)
+        image.src = superTechImageFile
+    })()
 })
 
 export const contactTab = (() => {

@@ -45,6 +45,13 @@ body {
 .content {
     flex-grow: 1;
 }
+.container {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+    padding: 50px 200px 50px 200px;
+}
 
 /* Footer */
 .footer-container {
@@ -58,13 +65,6 @@ body {
 }
 
 /* Home Tab */
-.container {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 35%;
-    padding: 50px 200px 50px 200px;
-}
 .home-title {
     font-size: 30px;
     font-weight: 550;
@@ -83,4 +83,14 @@ body {
 .location-title {
     font-size: 20px;
     font-weight: 550;
+}
+
+/* Menu Tab */
+.mobil-image {
+    height: 500px;
+    width: auto;
+}
+.supertech-image {
+    height: 500px;
+    width: auto;
 }
