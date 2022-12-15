@@ -38,21 +38,13 @@ export const menuTab = () => {
     const beverageMenu = (() => {
         const menuCategoryContainer = elementCreation.createContainer('menu-sub-container', 'menu-sub-title', 'Beverages', 'menu-sub-content', '', tabContentContainer)
         const mobil = elementCreation.createMenuItem('Mobil 1 Extended Performance Full Synthetic Motor Oil 5W-30', '39.99', mobilImageFile, menuCategoryContainer.secondElement)
-        const supertech = elementCreation.createMenuItem('Super Tech Full Synthetic SAE 5W-30 Motor Oil', '39.99', superTechImageFile, menuCategoryContainer.secondElement)
+        const supertech = elementCreation.createMenuItem('Super Tech Full Synthetic SAE 5W-30 Motor Oil', '26.25', superTechImageFile, menuCategoryContainer.secondElement)
     })()
 
     const sidesMenu = (() => {
         const menuCategoryContainer = elementCreation.createContainer('menu-sub-container', 'menu-sub-title', 'Sides', 'menu-sub-content', '', tabContentContainer)
-    
-        const nutsBolts = (() => {
-            const container = elementCreation.createContainer('menu-sub2-container', 'menu-sub2-title', 'Assorted Nuts & Bolts ... $12.00', 'nutsBolts-content', '', menuCategoryContainer.secondElement)
-            const image = elementCreation.img(nutsBoltsImageFile, container.secondElement)
-        })()
-        
-        const spareTire = (() => {
-            const container = elementCreation.createContainer('menu-sub2-container', 'menu-sub2-title', 'Spare Tire Salad ... $86.00', 'spareTire-content', '', menuCategoryContainer.secondElement)
-            const image = elementCreation.img(spareTireImageFile, container.secondElement)
-        })()
+        const nutsBolts = elementCreation.createMenuItem('Assorted Nuts & Bolts', '12.00', nutsBoltsImageFile, menuCategoryContainer.secondElement)
+        const spareTire = elementCreation.createMenuItem('Spare Tire Salad', '86.00', spareTireImageFile, menuCategoryContainer.secondElement)
     })()
 }
 
