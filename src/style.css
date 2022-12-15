@@ -56,6 +56,10 @@ body {
     width: 35%;
     padding: 50px 200px 50px 200px;
 }
+img {
+    height: 350px;
+    width: auto;
+}
 
 /* Footer */
 .footer-container {
@@ -72,6 +76,7 @@ body {
 .home-title {
     font-size: 30px;
     font-weight: 550;
+    white-space: nowrap;
 }
 .review-container {
     display: flex;
@@ -107,8 +112,5 @@ body {
 }
 .menu-sub2-title {
     padding: 30px;
-}
-img {
-    height: 350px;
-    width: auto;
+    white-space: nowrap;
 }

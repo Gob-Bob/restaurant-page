@@ -16,9 +16,4 @@ import './style.css'
         const contact = elementCreation.create('div', 'class', 'footer-contact', 'Contact us at info@acme.com or 1-800-555-1212', container)
         const help = elementCreation.create('div', 'class', 'footer-help', 'Need help? Visit our support page for assistance', container)        
     })()
-
-    // document.addEventListener('DOMContentLoaded', () => {
-    //     tabs.setupTabs()
-    //     tabs.tabContainer.querySelector('.tab').click()
-    // })
 })()

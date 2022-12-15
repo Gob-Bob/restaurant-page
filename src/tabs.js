@@ -15,7 +15,7 @@ const createContainer = (containerClassName, firstElementClassName, firstElement
 }
 
 export const homeTab = (() => {
-    const tabButton = elementCreation.create('button', 'class', 'tab', 'Home', tabContainer)
+    elementCreation.create('button', 'class', 'tab', 'Home', tabContainer)
     const tabContentContainer = elementCreation.create('div', 'class', 'content', '', mainContent)
     tabContentContainer.classList.add('container')
     tabContentContainer.classList.add('home')
@@ -47,14 +47,12 @@ export const menuTab = () => {
     
         const mobil = (() => {
             const container = createContainer('menu-sub2-container', 'menu-sub2-title', 'Mobil 1 Extended Performance Full Synthetic Motor Oil 5W-30 ... $39.99', 'mobil-content', '', menuCategoryContainer.secondElement)
-            const image = elementCreation.create('img', 'class', 'mobil-image', '', container.secondElement)
-            image.src = mobilImageFile
+            const image = elementCreation.img(mobilImageFile, container.secondElement)
         })()
         
         const superTech = (() => {
             const container = createContainer('menu-sub2-container', 'menu-sub2-title', 'Super Tech Full Synthetic SAE 5W-30 Motor Oil ... $26.85', 'supertech-content', '', menuCategoryContainer.secondElement)
-            const image = elementCreation.create('img', 'class', 'supertech-image', '', container.secondElement)
-            image.src = superTechImageFile
+            const image = elementCreation.img(superTechImageFile, container.secondElement)
         })()
     })()
 
@@ -63,14 +61,12 @@ export const menuTab = () => {
     
         const nutsBolts = (() => {
             const container = createContainer('menu-sub2-container', 'menu-sub2-title', 'Assorted Nuts & Bolts ... $12.00', 'nutsBolts-content', '', menuCategoryContainer.secondElement)
-            const image = elementCreation.create('img', 'class', 'nutsBolts-image', '', container.secondElement)
-            image.src = nutsBoltsImageFile
+            const image = elementCreation.img(nutsBoltsImageFile, container.secondElement)
         })()
         
         const spareTire = (() => {
             const container = createContainer('menu-sub2-container', 'menu-sub2-title', 'Spare Tire Salad ... $86.00', 'spareTire-content', '', menuCategoryContainer.secondElement)
-            const image = elementCreation.create('img', 'class', 'spareTire-image', '', container.secondElement)
-            image.src = spareTireImageFile
+            const image = elementCreation.img(spareTireImageFile, container.secondElement)
         })()
     })()
 }
@@ -84,7 +80,16 @@ export const contactTab = () => {
     tabButton.classList.add('tab-active')
     tabContentContainer.classList.add('content-active')
 
-
+    const contactUs = (() => {
+        const contactCategoryContainer = createContainer('contact-sub-container', 'contact-sub-title', 'Contact Us', 'contact-sub-content', '', tabContentContainer)
+    
+        const elonMusk = (() => {
+            const container = createContainer('contact-sub2-container', 'contact-sub2-info', 'Elon Musk', 'contact-sub2-img', '', contactCategoryContainer.secondElement)
+            
+            const image = elementCreation.create('img', 'class', 'mobil-image', '', container.secondElement)
+            image.src = mobilImageFile
+        })()
+    })()
 }
 
 export const setupTabs = () => {
