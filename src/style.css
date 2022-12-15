@@ -1,6 +1,10 @@
+/* * {
+    outline: 1px dashed white;
+} */
 :root {
     --active-tab-background-color: rgba(200, 200, 200, 0.95);
     --tab-footer-background-color: rgba(50, 50, 50, 0.8);
+    --img-height-size: 300px;
 }
 html,
 body {
@@ -86,12 +90,25 @@ body {
 }
 
 /* Menu Tab */
-.mobil-image,
-.supertech-image {
+.menu-sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-sub-title {
+    font-size: 30px;
+    font-weight: 550;
+    padding: 30px;
+}
+.menu-sub2-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-sub2-title {
+    padding: 30px;
+}
+img {
     height: 350px;
     width: auto;
-}
-.mobil-container,
-.supertech-container {
-    border: 1px solid black;
 }

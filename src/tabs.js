@@ -1,6 +1,8 @@
 import * as elementCreation from './element'
 import mobilImageFile from './mobil.jpg'
 import superTechImageFile from './supertech.jpg'
+import nutsBoltsImageFile from './nuts&bolts.jpg'
+import spareTireImageFile from './spareTire.jpg'
 
 const mainContent = document.getElementById('content')
 export const tabContainer = elementCreation.create('div', 'class', 'tabContainer', '', mainContent)
@@ -14,11 +16,11 @@ const createContainer = (containerClassName, firstElementClassName, firstElement
 
 export const homeTab = (() => {
     const tabButton = elementCreation.create('button', 'class', 'tab', 'Home', tabContainer)
-    tabButton.classList.add('tab-active')
+    // tabButton.classList.add('tab-active')
     const tabContentContainer = elementCreation.create('div', 'class', 'content', '', mainContent)
     tabContentContainer.classList.add('container')
     tabContentContainer.classList.add('home')
-    tabContentContainer.classList.add('content-active')
+    // tabContentContainer.classList.add('content-active')
 
     const tabTitle = elementCreation.create('div', 'class', 'home-title', 'Welcome to the Scrap Yard!', tabContentContainer)
 
@@ -38,25 +40,41 @@ export const homeTab = (() => {
 
 export const menuTab = () => {
     const tabButton = elementCreation.create('button', 'class', 'tab', 'Menu', tabContainer)
+    tabButton.classList.add('tab-active')
     const tabContentContainer = elementCreation.create('div', 'class', 'content', '', mainContent)
+    tabContentContainer.classList.add('content-active')
     tabContentContainer.classList.add('container')
     tabContentContainer.classList.add('menu')
 
     const beverageMenu = (() => {
-        const beverageContainer = createContainer('beverage-container', 'beverage-title', 'Beverages', 'beverage-content', '', tabContentContainer)
+        const menuCategoryContainer = createContainer('menu-sub-container', 'menu-sub-title', 'Beverages', 'menu-sub-content', '', tabContentContainer)
     
         const mobil = (() => {
-            const container = createContainer('mobil-container', 'mobil-title', 'Mobil 1 Extended Performance Full Synthetic Motor Oil 5W-30', 'mobil-content', '', beverageContainer.secondElement)
+            const container = createContainer('menu-sub2-container', 'menu-sub2-title', 'Mobil 1 Extended Performance Full Synthetic Motor Oil 5W-30 ... $39.99', 'mobil-content', '', menuCategoryContainer.secondElement)
             const image = elementCreation.create('img', 'class', 'mobil-image', '', container.secondElement)
             image.src = mobilImageFile
-            elementCreation.create('div', 'class', 'mobil-price', '$39.99', container.secondElement)
         })()
         
         const superTech = (() => {
-            const container = createContainer('supertech-ontainer', 'supertech-title', 'Super Tech Full Synthetic SAE 5W-30 Motor Oil', 'supertech-content', '', beverageContainer.secondElement)
+            const container = createContainer('menu-sub2-container', 'menu-sub2-title', 'Super Tech Full Synthetic SAE 5W-30 Motor Oil ... $26.85', 'supertech-content', '', menuCategoryContainer.secondElement)
             const image = elementCreation.create('img', 'class', 'supertech-image', '', container.secondElement)
             image.src = superTechImageFile
-            elementCreation.create('div', 'class', 'supertech-price', '$26.85', container.secondElement)
+        })()
+    })()
+
+    const sidesMenu = (() => {
+        const menuCategoryContainer = createContainer('menu-sub-container', 'menu-sub-title', 'Sides', 'menu-sub-content', '', tabContentContainer)
+    
+        const nutsBolts = (() => {
+            const container = createContainer('menu-sub2-container', 'menu-sub2-title', 'Assorted Nuts & Bolts ... $12.00', 'nutsBolts-content', '', menuCategoryContainer.secondElement)
+            const image = elementCreation.create('img', 'class', 'nutsBolts-image', '', container.secondElement)
+            image.src = nutsBoltsImageFile
+        })()
+        
+        const spareTire = (() => {
+            const container = createContainer('menu-sub2-container', 'menu-sub2-title', 'Spare Tire Salad ... $86.00', 'spareTire-content', '', menuCategoryContainer.secondElement)
+            const image = elementCreation.create('img', 'class', 'spareTire-image', '', container.secondElement)
+            image.src = spareTireImageFile
         })()
     })()
 }
