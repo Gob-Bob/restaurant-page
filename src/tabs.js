@@ -37,16 +37,8 @@ export const menuTab = () => {
 
     const beverageMenu = (() => {
         const menuCategoryContainer = elementCreation.createContainer('menu-sub-container', 'menu-sub-title', 'Beverages', 'menu-sub-content', '', tabContentContainer)
-    
-        const mobil = (() => {
-            const container = elementCreation.createContainer('menu-sub2-container', 'menu-sub2-title', 'Mobil 1 Extended Performance Full Synthetic Motor Oil 5W-30 ... $39.99', 'mobil-content', '', menuCategoryContainer.secondElement)
-            const image = elementCreation.img(mobilImageFile, container.secondElement)
-        })()
-        
-        const superTech = (() => {
-            const container = elementCreation.createContainer('menu-sub2-container', 'menu-sub2-title', 'Super Tech Full Synthetic SAE 5W-30 Motor Oil ... $26.85', 'supertech-content', '', menuCategoryContainer.secondElement)
-            const image = elementCreation.img(superTechImageFile, container.secondElement)
-        })()
+        const mobil = elementCreation.createMenuItem('Mobil 1 Extended Performance Full Synthetic Motor Oil 5W-30', '39.99', mobilImageFile, menuCategoryContainer.secondElement)
+        const supertech = elementCreation.createMenuItem('Super Tech Full Synthetic SAE 5W-30 Motor Oil', '39.99', superTechImageFile, menuCategoryContainer.secondElement)
     })()
 
     const sidesMenu = (() => {

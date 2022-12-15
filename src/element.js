@@ -19,3 +19,7 @@ export const createContainer = (containerClassName, firstElementClassName, first
     const secondElement = create('div', 'class', SecondElementClassName, SecondElementDisplayText, container)
     return {container, firstElement, secondElement}
 }
+export const createMenuItem = (name, price, imgSource, parent) => {
+    const container = createContainer('menu-sub2-container', 'menu-sub2-title', name + ' ... $' + price, 'menu-sub2-content', '', parent)
+    const image = img(imgSource, container.secondElement)
+}
