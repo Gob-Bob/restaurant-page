@@ -116,3 +116,21 @@ img {
     padding: 30px;
     white-space: nowrap;
 }
+
+/* Contact Tab */
+.contact-sub2-container {
+    display: flex;
+}
+.contact-sub3-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.contact-sub3-title {
+    font-size: 30px;
+}
+.contact-sub3-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
