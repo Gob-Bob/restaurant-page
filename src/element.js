@@ -13,3 +13,9 @@ export const img = (source, parent) => {
     parent.appendChild(element)
     return element
 }
+export const createContainer = (containerClassName, firstElementClassName, firstElementDisplayText, SecondElementClassName, SecondElementDisplayText, appendParent) => {
+    const container = create('div', 'class', containerClassName, '', appendParent)
+    const firstElement = create('div', 'class', firstElementClassName, firstElementDisplayText, container)
+    const secondElement = create('div', 'class', SecondElementClassName, SecondElementDisplayText, container)
+    return {container, firstElement, secondElement}
+}
