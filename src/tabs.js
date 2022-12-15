@@ -8,6 +8,8 @@ import scrapMetalImageFile from './scrapmetal.png'
 import carBatteryImageFile from './carbattery.png'
 import cablesImageFile from './cables.png'
 import elonMuskImageFile from './elonmusk.jpg'
+import wallEImageFile from './walle.jpg'
+import adamSmasherImageFile from './adamsmasher.jpg'
 
 
 const mainContent = document.getElementById('content')
@@ -71,7 +73,9 @@ export const contactTab = () => {
 
     const contactUs = (() => {
         const contactCategoryContainer = elementCreation.createContainer('contact-sub-container', 'contact-sub-title', 'Contact Us', 'contact-sub-content', '', tabContentContainer)
-        const elonMusk = elementCreation.createContact('Elon Musk', 'CEO', '111-111-1111', 'fakeemail123@email.com', elonMuskImageFile, contactCategoryContainer.secondElement)
+        const elonMusk = elementCreation.createContact('Elon Musk', 'Owner', '111-111-1111', 'fakeemail123@email.com', elonMuskImageFile, contactCategoryContainer.secondElement)
+        const wallE = elementCreation.createContact('Wall-E', 'Cook', '111-111-1111', 'fakeemail123@email.com', wallEImageFile, contactCategoryContainer.secondElement)
+        const adamSmasher = elementCreation.createContact('Adam Smasher', 'Security', '111-111-1111', 'fakeemail123@email.com', adamSmasherImageFile, contactCategoryContainer.secondElement)
     })()
 }
 

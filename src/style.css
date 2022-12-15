@@ -59,6 +59,7 @@ body {
 img {
     height: 350px;
     width: auto;
+    padding-bottom: 15px;
 }
 
 /* Footer */
@@ -106,6 +107,7 @@ img {
     font-size: 30px;
     font-weight: 550;
     padding: 30px;
+    text-decoration: underline;
 }
 .menu-sub2-container {
     display: flex;
