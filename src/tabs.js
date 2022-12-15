@@ -16,11 +16,9 @@ const createContainer = (containerClassName, firstElementClassName, firstElement
 
 export const homeTab = (() => {
     const tabButton = elementCreation.create('button', 'class', 'tab', 'Home', tabContainer)
-    // tabButton.classList.add('tab-active')
     const tabContentContainer = elementCreation.create('div', 'class', 'content', '', mainContent)
     tabContentContainer.classList.add('container')
     tabContentContainer.classList.add('home')
-    // tabContentContainer.classList.add('content-active')
 
     const tabTitle = elementCreation.create('div', 'class', 'home-title', 'Welcome to the Scrap Yard!', tabContentContainer)
 
@@ -40,9 +38,7 @@ export const homeTab = (() => {
 
 export const menuTab = () => {
     const tabButton = elementCreation.create('button', 'class', 'tab', 'Menu', tabContainer)
-    tabButton.classList.add('tab-active')
     const tabContentContainer = elementCreation.create('div', 'class', 'content', '', mainContent)
-    tabContentContainer.classList.add('content-active')
     tabContentContainer.classList.add('container')
     tabContentContainer.classList.add('menu')
 
@@ -81,9 +77,14 @@ export const menuTab = () => {
 
 export const contactTab = () => {
     const tabButton = elementCreation.create('button', 'class', 'tab', 'Contact', tabContainer)
-    const tabContentContainer = elementCreation.create('div', 'class', 'content', 'Contact: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis erat sed elit scelerisque cursus. Fusce dignissim volutpat justo, in pretium lectus viverra a. Suspendisse potenti. Morbi vitae enim accumsan, euismod tellus at, facilisis tortor. Duis rutrum turpis sed velit volutpat, sed pellentesque quam euismod. Proin quis erat quis erat auctor fermentum at quis orci. Nam dignissim leo at urna bibendum, quis tincidunt arcu lobortis. In hac habitasse platea dictumst. Sed in nunc quis nunc imperdiet aliquet.', mainContent)
+    const tabContentContainer = elementCreation.create('div', 'class', 'content', '', mainContent)
     tabContentContainer.classList.add('container')
     tabContentContainer.classList.add('contact')
+
+    tabButton.classList.add('tab-active')
+    tabContentContainer.classList.add('content-active')
+
+
 }
 
 export const setupTabs = () => {

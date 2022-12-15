@@ -11,7 +11,7 @@ body {
     margin: 0px;
     height: 100%;
     font-family: 'Times New Roman', Times, serif;
-    background: url('./background.jpg') no-repeat center/cover;
+    background: url('./background.jpg') repeat center/cover;
     line-height: 1.5;
 }
 
