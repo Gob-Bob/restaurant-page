@@ -95,12 +95,14 @@ img {
 }
 
 /* Menu Tab */
-.menu-sub-container {
+.menu-sub-container,
+.contact-sub-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.menu-sub-title {
+.menu-sub-title,
+.contact-sub-title {
     font-size: 30px;
     font-weight: 550;
     padding: 30px;
